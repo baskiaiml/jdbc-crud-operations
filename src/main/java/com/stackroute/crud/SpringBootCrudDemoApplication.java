@@ -11,13 +11,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class SpringSampleApplication {
+public class SpringBootCrudDemoApplication {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSampleApplication.class, args);
+		SpringApplication.run(SpringBootCrudDemoApplication.class, args);
 	}
 
 }

@@ -3,9 +3,6 @@ package com.stackroute.crud.util;
 import java.sql.*;
 
 public class Delete {
-    private Connection connection;
-    private Statement statement;
-    private ResultSet resultSet;
 
     public void deleteOperation(int id){
 
@@ -17,7 +14,7 @@ public class Delete {
         }
 
         //Try to create a connection with your database
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeedb", "root", "Root@123");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeedb?useSSL=false", "root", "root1234");
              PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM employee WHERE id='"+id+"'");) {
 
             int rowsAffected = preparedStatement.executeUpdate();
